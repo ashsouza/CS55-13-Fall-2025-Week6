@@ -26,12 +26,13 @@
   text-align: center;
 }
  
-.headingMd {
+.headingMd, .headingXl {
   font-size: 1.2rem;
   line-height: 1.5;
   color: rgb(255, 108, 145);
   text-align: center;
 }
+
  
 .borderCircle {
   border-radius: 9999px;

@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import Date from '../components/date';
+
 // Import the Head component from Next.js to manage HTML document head.
 import Head from 'next/head'; 
 // Import the custom Layout component and a constant `siteTitle` for page structure and metadata.
@@ -39,17 +42,17 @@ export default function Home({ allPostsData }) {
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              {title}
+          <li className={utilStyles.listItem} key={id}>
+            <Link href={`/posts/${id}`}>{title}</Link>
               <br />
-              {id}
-              <br />
-              {date}
-            </li>
+              <small className={utilStyles.lightText}>
+            <Date dateString={date} />
+              </small>
+          </li>
           ))}
         </ul>
       </section>
-      
+
     </Layout>
   );
 }
