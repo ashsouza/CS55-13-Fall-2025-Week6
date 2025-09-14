@@ -10,6 +10,14 @@
   margin: 1rem 0;
   color: rgb(255, 108, 145);
 }
+
+.lightText {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: rgb(255, 108, 145);
+  font-weight: 100;
+   letter-spacing: -0.05rem;
+}
  
 .headingXl {
   font-size: 2rem;
@@ -17,6 +25,7 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+    border-color: rgb(255, 108, 145);
 }
  
 .headingLg {
@@ -24,6 +33,7 @@
   line-height: 1.4;
   margin: 1rem 0;
   text-align: center;
+    border-color: rgb(255, 108, 145);
 }
  
 .headingMd, .headingXl {
@@ -53,12 +63,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
+    border-color: rgb(255, 108, 145);
 }
  
 .listItem {
   margin: 0 0 1.25rem;
+    border-color: rgb(255, 108, 145);
 }
  
 .lightText {
-  color: #666;
+ color: rgb(165, 53, 81);
 }
