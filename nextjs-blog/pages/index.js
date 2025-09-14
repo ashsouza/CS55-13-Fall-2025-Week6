@@ -4,9 +4,20 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout'; 
 // Import a CSS module for utility styles.
 import utilStyles from '../styles/utils.module.css'; 
- 
+
+import { getSortedPostsData } from '../lib/posts';
+ 
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
 // Define a default export for the Home page component.
-export default function Home() {
+export default function Home({ allPostsData }) {
   // The function returns the JSX structure for the home page.
   return (
     // Wrap the page content in the Layout component, passing `home` as a prop.
@@ -23,6 +34,22 @@ export default function Home() {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
+
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <ul className={utilStyles.list}>
+          {allPostsData.map(({ id, date, title }) => (
+            <li className={utilStyles.listItem} key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul>
+      </section>
+      
     </Layout>
   );
 }
