@@ -7,9 +7,9 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout'; 
 // Import a CSS module for utility styles.
 import utilStyles from '../styles/utils.module.css'; 
-
+// Import a function to get sorted post data from the local data source.
 import { getSortedPostsData } from '../lib/posts';
- 
+// Import a function to get sorted post data from the local data source.
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -24,7 +24,7 @@ export default function Home({ allPostsData }) {
   // The function returns the JSX structure for the home page.
   return (
     // Wrap the page content in the Layout component, passing `home` as a prop.
-    // set the title and class name for the elements below to modify CSS
+    // to apply home-specific styling.
     <Layout home> 
 
       <Head>

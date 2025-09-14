@@ -1,10 +1,16 @@
+// Import the custom Layout component for consistent page structure.
 import Layout from '../../components/layout';
+// Import data fetching functions from the local posts library.
 import { getAllPostIds, getPostData } from '../../lib/posts';
+// Import the Head component from Next.js to manage the document head.
 import Head from 'next/head';
+// Import a custom Date component to format the post's publication date.
 import Date from '../../components/date';
+// Import a CSS module for utility styles.
 import utilStyles from '../../styles/utils.module.css';
 
- 
+// This function fetches the data for each posts at build time
+// receives `params` containing the post's ID.
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
   const postData = await getPostData(params.id);
