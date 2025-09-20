@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Date from '../components/date';
 
+//comment
 // Import the Head component from Next.js to manage HTML document head.
 import Head from 'next/head'; 
 // Import the custom Layout component and a constant `siteTitle` for page structure and metadata.
