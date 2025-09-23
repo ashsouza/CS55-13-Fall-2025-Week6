@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Two Forms of Pre-rendering",
+        "date": "2022-01-01",
+        "featured_image": "/images/profile.jpg",
+        "contentHtml": "<p>Next.js has two forms of pre-rendering: <strong>Static Generation</strong> and <strong>Server-side Rendering</strong>. The difference is in <strong>when</strong> it generates the HTML for a page.</p><ul><li><p><strong>Static Generation</strong> is the pre-rendering method that generates the HTML at <strong>build time</strong>. The pre-rendered HTML is then _reused_ on each request.</p></li><li><p><strong>Server-side Rendering</strong> is the pre-rendering method that generates the HTML on <strong>each request</strong>.</p></li></ul><p>Importantly, Next.js lets you <strong>choose</strong> which pre-rendering form to use for each page. You can create a \"hybrid\" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.</p>",
+        "id": 2
+    },
+    {
+        "title": "When to Use Static Generation v.s. Server-side Rendering",
+        "date": "2022-01-02",
+        "featured_image": "/images/profile.jpg",
+        "contentHtml": "<p>We recommend using <strong>Static Generation</strong> (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.</p><p>You can use Static Generation for many types of pages, including:</p><ul><li><p>Marketing pages</p></li><li><p>Blog posts</p></li><li><p>E-commerce product listings</p></li><li><p>Help and documentation</p></li></ul><p>You should ask yourself: \"Can I pre-render this page <strong>ahead</strong> of a user's request?\" If the answer is yes, then you should choose Static Generation.</p><p>On the other hand, Static Generation is <strong>not</strong> a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.</p><p>In that case, you can use <strong>Server-Side Rendering</strong>. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.</p>",
+        "id": 1
+    },
+    {
+        "title": "Post 3",
+        "date": "2023-04-03",
+        "featured_image": "/images/1.jpg",
+        "contentHtml": "<p>The following letters are part of the English alphabet:<br><br><br><ul><li>-a</li><li>-b</li><li>-c</li><li>-d</li></ul></p>",
+        "id": 3
+    },
+    {
+        "title": "Post 4",
+        "date": "2023-04-04",
+        "featured_image": "/images/2.jpg",
+        "contentHtml": "<p>The following letters are part of the English alphabet:<br><br><br><ul><li>-e</li><li>-f</li><li>-g</li><li>-h</li></ul></p>",
+        "id": 4
+    },
+    {
+        "title": "Post 5",
+        "date": "2023-04-05",
+        "featured_image": "/images/3.jpg",
+        "contentHtml": "<p>The following letters are part of the English alphabet:<br><br><br><ul><li>-i</li><li>-j</li><li>-k</li><li>-elemeno - p</li></ul></p>",
+        "id": 5
+    }
+]

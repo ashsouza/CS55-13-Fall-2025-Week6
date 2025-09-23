@@ -74,3 +74,10 @@
 .lightText {
  color: rgb(165, 53, 81);
 }
+
+.postImage {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
