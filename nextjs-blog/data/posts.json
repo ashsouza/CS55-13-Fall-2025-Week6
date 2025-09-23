@@ -16,21 +16,21 @@
     {
         "title": "Post 3",
         "date": "2023-04-03",
-        "featured_image": "/images/1.jpg",
+        "featured_image": "/images/1.png",
         "contentHtml": "<p>The following letters are part of the English alphabet:<br><br><br><ul><li>-a</li><li>-b</li><li>-c</li><li>-d</li></ul></p>",
         "id": 3
     },
     {
         "title": "Post 4",
         "date": "2023-04-04",
-        "featured_image": "/images/2.jpg",
+        "featured_image": "/images/2.png",
         "contentHtml": "<p>The following letters are part of the English alphabet:<br><br><br><ul><li>-e</li><li>-f</li><li>-g</li><li>-h</li></ul></p>",
         "id": 4
     },
     {
         "title": "Post 5",
         "date": "2023-04-05",
-        "featured_image": "/images/3.jpg",
+        "featured_image": "/images/3.png",
         "contentHtml": "<p>The following letters are part of the English alphabet:<br><br><br><ul><li>-i</li><li>-j</li><li>-k</li><li>-elemeno - p</li></ul></p>",
         "id": 5
     }
