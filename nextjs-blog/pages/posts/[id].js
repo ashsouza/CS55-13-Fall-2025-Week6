@@ -1,7 +1,7 @@
 // Import the custom Layout component for consistent page structure.
 import Layout from '../../components/layout';
 // Import data fetching functions from the local posts library.
-import { getAllPostIds, getPostData } from '../../lib/posts-json';
+import { getAllPostIds, getPostData } from '../../lib/posts-firebase';
 // Import the Head component from Next.js to manage the document head.
 import Head from 'next/head';
 // Import a custom Date component to format the post's publication date.
@@ -24,7 +24,7 @@ export async function getStaticProps({ params }) {
 }
  
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const paths = await getAllPostIds();
   return {
     paths,
     fallback: false,
@@ -39,6 +39,7 @@ export default function Post({ postData }) {
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1><br />
+        <h2 className={utilStyles.headingSml}>{postData.contentImage}</h2><br />
         <Image className={utilStyles.postImage}
                         src={postData.featured_image}
                         width={200}
@@ -53,6 +54,9 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
         <div className={utilStyles.headingMd} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+                <button className={utilStyles.postButton}>
+        {postData.contentTag}
+        </button>
       </article>
     </Layout>
   );

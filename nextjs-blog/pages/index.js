@@ -9,12 +9,12 @@ import Layout, { siteTitle } from '../components/layout';
 // Import a CSS module for utility styles.
 import utilStyles from '../styles/utils.module.css'; 
 // Import a function to get sorted post data from the local data source.
-import { getSortedPostsData } from '../lib/posts-json';
+import { getSortedPostsData } from '../lib/posts-firebase';
 // Import a function to get sorted post data from the local data source.
 import Image from 'next/image'
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
   return {
     props: {
       allPostsData,

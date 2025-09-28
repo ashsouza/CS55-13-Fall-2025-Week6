@@ -61,6 +61,7 @@ export async function getPostData(id) {
             "date": '',
             "contentHtml": 'Not found',
             "featured_image": 'Not found',
+            "tag": 'Not found'
         }
     } else {
         return objectReturned[0];

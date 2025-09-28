@@ -81,3 +81,19 @@
   margin-right: auto;
   width: 50%;
 }
+
+.postButton {
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color: white;
+  background-color:rgb(255, 108, 145);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.headingSml {
+  color:rgb(165, 53, 81);
+  font-size: medium;
+}
